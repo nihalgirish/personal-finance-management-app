@@ -1,46 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Finance Manager</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
-</head>
-<body>
-    <div class="app-container">
-        <h1>Welcome to Your Personal Finance Manager</h1>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- Basic Form for Financial Data -->
-        <form id="finance-form">
-            <!-- Transaction Amount -->
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount" required>
+/* Apply the Times New Roman font across the entire webpage */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #071952; /* Set background color */
+    color: #071952; /* Set text color */
+}
 
-            <!-- Category Dropdown -->
-            <label for="category">Category:</label>
-            <select id="category" name="category" required>
-                <option value="expenses">Expense</option>
-                <option value="income">Income</option>
-                <option value="savings">Savings</option>
-                <option value="investments">Investments</option>
-            </select>
+/* Sidebar Navigation */
+#sidebar {
+    background-color: #0B666A; /* Sidebar color */
+    color: #97FEED; /* Text color in sidebar */
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
 
-            <!-- Description -->
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description">
+.nav-item {
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
 
-            <!-- Submit Button -->
-            <button type="submit">Add Transaction</button>
-        </form>
+.nav-item a {
+    text-decoration: none;
+    color: #97FEED;
+    font-size: 1.2rem;
+}
 
-        <!-- Output area for financial summary -->
-        <div id="financial-summary">
-            <h3>Financial Summary</h3>
-            <div id="total-expenses">Total Expenses: $0</div>
-            <div id="total-savings">Total Savings: $0</div>
-        </div>
-    </div>
+.nav-item a:hover {
+    color: #35A29F; /* Button hover color */
+}
 
-    <script src="app.js"></script> <!-- Link to JavaScript -->
-</body>
-</html>
+/* Main content area */
+#main-content {
+    margin-left: 250px; /* Space for the sidebar */
+    padding: 20px;
+}
+
+/* Welcome page styling */
+.welcome-page {
+    background-color: #071952;
+    color: #97FEED;
+    text-align: center;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.welcome-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-page p {
+    font-size: 1.2rem;
+}
+
+/* Styling for content pages (Cost Calculator, Spending Trends) */
+.content {
+    background-color: #071952;
+    color: #97FEED;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Buttons and textboxes styling */
+input[type="text"], input[type="number"], select, button {
+    background-color: #35A29F; /* Buttons and textboxes */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #97FEED; /* Button hover color */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    #main-content {
+        margin-left: 0;
+    }
+}
