@@ -1,14 +1,14 @@
-/* Reset some defaut styles */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply a formal font style */
+/* Apply the Futura PT font */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f5f5dc; /* Beige background */
+    font-family: 'Futura PT', Arial, sans-serif; /* Ensure Futura PT is loaded */
+    background-color: #FAF1E6; /* New background color */
     color: #000; /* Black text */
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
     padding: 40px;
     background-color: #f5f5dc; /* Beige background */
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Increased shadow */
     text-align: center;
 }
 
@@ -62,7 +62,7 @@ form button {
     padding: 12px;
     font-size: 1.1rem;
     background-color: #000; /* Black background */
-    color: #f5f5dc; /* Beige text */
+    color: #FAF1E6; /* Beige text */
     border: none;
     border-radius: 4px;
     cursor: pointer;
