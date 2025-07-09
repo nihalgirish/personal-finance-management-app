@@ -1,106 +1,43 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Apply the Times New Roman font across the entire webpage */
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #071952; /* Set background color */
-    color: #071952; /* Set text color */
-}
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <div class="nav-item">
+            <a href="#welcome">Welcome</a>
+        </div>
+        <div class="nav-item">
+            <a href="#cost-calculator">Cost Calculator</a>
+        </div>
+        <div class="nav-item">
+            <a href="#spending-trends">Spending Trends</a>
+        </div>
+    </div>
 
-/* Sidebar Navigation */
-#sidebar {
-    background-color: #0B666A; /* Sidebar color */
-    color: #97FEED; /* Text color in sidebar */
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-}
+    <!-- Main content area -->
+    <div id="main-content">
+        <div class="welcome-page" id="welcome">
+            <h1>Welcome to Your Personal Finance Manager</h1>
+            <p>Your financial insights, now at your fingertips. Let's manage your expenses, savings, and trends together!</p>
+        </div>
 
-.nav-item {
-    margin: 15px 0;
-    padding: 10px;
-    text-align: center;
-}
+        <!-- Other pages go here -->
+        <div class="content" id="cost-calculator">
+            <!-- Cost Calculator content will go here later -->
+        </div>
 
-.nav-item a {
-    text-decoration: none;
-    color: #97FEED;
-    font-size: 1.2rem;
-}
+        <div class="content" id="spending-trends">
+            <!-- Spending trends content will go here later -->
+        </div>
+    </div>
 
-.nav-item a:hover {
-    color: #35A29F; /* Button hover color */
-}
-
-/* Main content area */
-#main-content {
-    margin-left: 250px; /* Space for the sidebar */
-    padding: 20px;
-}
-
-/* Welcome page styling */
-.welcome-page {
-    background-color: #071952;
-    color: #97FEED;
-    text-align: center;
-    padding: 50px;
-    border-radius: 8px;
-}
-
-.welcome-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.welcome-page p {
-    font-size: 1.2rem;
-}
-
-/* Styling for content pages (Cost Calculator, Spending Trends) */
-.content {
-    background-color: #071952;
-    color: #97FEED;
-    margin-top: 30px;
-    padding: 30px;
-    border-radius: 8px;
-}
-
-/* Buttons and textboxes styling */
-input[type="text"], input[type="number"], select, button {
-    background-color: #35A29F; /* Buttons and textboxes */
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    margin: 10px 0;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #97FEED; /* Button hover color */
-}
-
-/* Responsive design for mobile */
-@media (max-width: 600px) {
-    #sidebar {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        position: relative;
-    }
-
-    #main-content {
-        margin-left: 0;
-    }
-}
+    <script src="app.js"></script>
+</body>
+</html>
