@@ -133,5 +133,22 @@ const spendingTrendsChart = new Chart(ctx, {
         }
     }
 });
+    // Calculate insights based on the data (this is a simple example for now)
+function calculateInsights() {
+    const totalExpenses = expenses.reduce((acc, curr) => acc + curr, 0);
+    const totalSavings = savings.reduce((acc, curr) => acc + curr, 0);
+    const totalInvestments = investments.reduce((acc, curr) => acc + curr, 0);
+
+    const insights = `
+        Total Expenses: $${totalExpenses.toFixed(2)}\n
+        Total Savings: $${totalSavings.toFixed(2)}\n
+        Total Investments: $${totalInvestments.toFixed(2)}\n
+    `;
+
+    document.getElementById('trends-insights').textContent = insights;
+}
+
+calculateInsights();
+
 
 }
