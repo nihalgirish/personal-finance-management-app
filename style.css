@@ -19,9 +19,9 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 40px;
-    background-color: #f5f5dc; /* Beige background */
+    background-color: #FAF1E6; /* Beige background */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Increased shadow */
     text-align: center;
 }
 
