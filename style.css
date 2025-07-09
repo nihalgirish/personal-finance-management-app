@@ -14,7 +14,7 @@ body {
 
 /* Sidebar Navigation */
 #sidebar {
-    background-color: #0B666A; /* Sidebar color */
+    background-color: #000; /* Changed to black */
     color: #97FEED; /* Text color in sidebar */
     width: 250px;
     height: 100vh;
@@ -24,6 +24,7 @@ body {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    border-right: 2px solid #97FEED; /* Added a light blue line */
 }
 
 .nav-item {
@@ -35,7 +36,7 @@ body {
 .nav-item a {
     text-decoration: none;
     color: #97FEED;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Increased font size for tabs */
 }
 
 .nav-item a:hover {
@@ -58,12 +59,12 @@ body {
 }
 
 .welcome-page h1 {
-    font-size: 2.5rem;
+    font-size: 3rem; /* Increased font size for welcome message */
     margin-bottom: 20px;
 }
 
 .welcome-page p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* Styling for content pages (Cost Calculator, Spending Trends) */
