@@ -15,8 +15,27 @@ financeForm.addEventListener('submit', function (e) {
 
     // Get form values
     const amount = parseFloat(amountInput.value);
-    const category = categoryInput.value;
+    let category = categoryInput.value.trim().toLowerCase(); // Normalize input
     const description = descriptionInput.value;
+
+    // Validate amount
+    if (isNaN(amount) || amount <= 0) {
+        alert('Please enter a valid positive amount.');
+        return;
+    }
+
+    // Normalize categories to handle plural/singular cases
+    if (category === 'saving') {
+        category = 'savings';
+    } else if (category === 'expense') {
+        category = 'expenses';
+    }
+
+    // Validate category
+    if (category !== 'expenses' && category !== 'savings') {
+        alert('Please select a valid category: "expenses" or "savings".');
+        return;
+    }
 
     // Create a transaction object
     const transaction = {
@@ -42,9 +61,9 @@ function updateSummary() {
 
     // Loop through transactions and calculate total expenses/savings
     transactions.forEach(transaction => {
-        if (transaction.category.toLowerCase() === 'expense') {
+        if (transaction.category === 'expenses') {
             totalExpenses += transaction.amount;
-        } else if (transaction.category.toLowerCase() === 'savings') {
+        } else if (transaction.category === 'savings') {
             totalSavings += transaction.amount;
         }
     });
