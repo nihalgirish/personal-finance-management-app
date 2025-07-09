@@ -32,8 +32,8 @@ financeForm.addEventListener('submit', function (e) {
     }
 
     // Validate category
-    if (category !== 'expenses' && category !== 'savings') {
-        alert('Please select a valid category: "expenses" or "savings".');
+    if (category !== 'expenses' && category !== 'savings' && category !== 'income' && category !== 'investments') {
+        alert('Please select a valid category: "expenses", "income", "savings", or "investments".');
         return;
     }
 
@@ -58,13 +58,19 @@ financeForm.addEventListener('submit', function (e) {
 function updateSummary() {
     let totalExpenses = 0;
     let totalSavings = 0;
+    let totalIncome = 0;
+    let totalInvestments = 0;
 
-    // Loop through transactions and calculate total expenses/savings
+    // Loop through transactions and calculate totals
     transactions.forEach(transaction => {
         if (transaction.category === 'expenses') {
             totalExpenses += transaction.amount;
         } else if (transaction.category === 'savings') {
             totalSavings += transaction.amount;
+        } else if (transaction.category === 'income') {
+            totalIncome += transaction.amount;
+        } else if (transaction.category === 'investments') {
+            totalInvestments += transaction.amount;
         }
     });
 
