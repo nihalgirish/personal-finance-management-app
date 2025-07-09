@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Finance Manager</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
 
@@ -18,13 +18,13 @@
             <a href="#cost-calculator">Cost Calculator</a>
         </div>
         <div class="nav-item">
-            <a href="#spending-trends">Spending Trends</a> <!-- This is the link -->
+            <a href="#spending-trends">Spending Trends</a>
         </div>
     </div>
 
-
     <!-- Main content area -->
     <div id="main-content">
+        <!-- Welcome Page -->
         <div class="welcome-page" id="welcome">
             <h1>Welcome to Your Personal Finance Manager</h1>
             <p>Your financial insights, now at your fingertips. Let's manage your expenses, savings, and trends together!</p>
@@ -63,24 +63,21 @@
             </div>
         </div>
 
+        <!-- Spending Trends Page -->
         <div class="content" id="spending-trends">
-            <!-- Spending trends content will go here later -->
+            <h2>Spending Trends</h2>
+
+            <!-- Graph Section -->
+            <canvas id="spendingTrendsChart" width="400" height="200"></canvas>
+
+            <!-- Insights Section -->
+            <div id="trends-summary">
+                <h3>Trends Summary</h3>
+                <p id="trends-insights">Here will be AI-powered insights once integrated.</p>
+            </div>
         </div>
     </div>
-    <!-- Spending Trends Page -->
-<div class="content" id="spending-trends">
-    <h2>Spending Trends</h2>
 
-    <!-- Graph Section -->
-    <canvas id="spendingTrendsChart" width="400" height="200"></canvas>
-
-    <!-- Insights Section -->
-    <div id="trends-summary">
-        <h3>Trends Summary</h3>
-        <p id="trends-insights">Here will be AI-powered insights once integrated.</p>
-    </div>
-</div>
-
-    <script src="app.js"></script>
+    <script src="app.js"></script> <!-- Link to JavaScript -->
 </body>
 </html>
