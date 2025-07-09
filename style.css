@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Apply the Futura PT font */
+/* Apply the Times New Roman font */
 body {
-    font-family: 'Futura PT', Arial, sans-serif; /* Ensure Futura PT is loaded */
-    background-color: #FAF1E6; /* New background color */
+    font-family: 'Times New Roman', Times, serif; /* Font changed to Times New Roman */
+    background-color: #FAF1E6; /* Beige background */
     color: #000; /* Black text */
     margin: 0;
     padding: 0;
@@ -19,9 +19,9 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 40px;
-    background-color: #FAF1E6; /* Beige background */
+    background-color: #f5f5dc; /* Beige background */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Increased shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Increased shadow */
     text-align: center;
 }
 
@@ -36,12 +36,12 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Increased spacing between form elements */
     margin-bottom: 20px;
 }
 
 form label {
-    font-weight: bold;
+    font-weight: normal; /* Removed bold styling */
     font-size: 1.1rem;
     color: #333;
     text-align: left;
@@ -56,6 +56,7 @@ form input {
     color: #000; /* Black text inside input */
     background-color: #fff; /* White input field */
     margin: 0 10px;
+    width: calc(100% - 20px); /* Ensure input takes up full width */
 }
 
 form button {
@@ -68,6 +69,7 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s;
     margin: 0 10px;
+    width: 100%; /* Make the button take full width */
 }
 
 form button:hover {
@@ -101,5 +103,11 @@ form button:hover {
 
     #financial-summary {
         margin-top: 20px;
+    }
+
+    /* Adjust button size for smaller screens */
+    form button {
+        padding: 10px;
+        font-size: 1rem;
     }
 }
