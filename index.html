@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Finance Manager</title>
@@ -65,6 +66,19 @@
             <!-- Spending trends content will go here later -->
         </div>
     </div>
+    <!-- Spending Trends Page -->
+<div class="content" id="spending-trends">
+    <h2>Spending Trends</h2>
+
+    <!-- Graph Section -->
+    <canvas id="spendingTrendsChart" width="400" height="200"></canvas>
+
+    <!-- Insights Section -->
+    <div id="trends-summary">
+        <h3>Trends Summary</h3>
+        <p id="trends-insights">Here will be AI-powered insights once integrated.</p>
+    </div>
+</div>
 
     <script src="app.js"></script>
 </body>
