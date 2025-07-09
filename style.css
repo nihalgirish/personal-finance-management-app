@@ -21,7 +21,7 @@ body {
     padding: 40px;
     background-color: #f5f5dc; /* Beige background */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Increased shadow */
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ form button {
     padding: 12px;
     font-size: 1.1rem;
     background-color: #000; /* Black background */
-    color: #FAF1E6; /* Beige text */
+    color: #f5f5dc; /* Beige text */
     border: none;
     border-radius: 4px;
     cursor: pointer;
