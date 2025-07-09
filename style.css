@@ -1,123 +1,106 @@
-/* Reset some default styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply the Times New Roman font */
+/* Apply the Times New Roman font across the entire webpage */
 body {
-    font-family: 'Times New Roman', Times, serif; /* Font changed to Times New Roman */
-    background-color: #FAF1E6; /* Beige background */
-    color: #000; /* Black text */
-    margin: 0;
-    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #071952; /* Set background color */
+    color: #071952; /* Set text color */
 }
 
-/* Main container for app */
-.app-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 40px;
-    background-color: #FAF1E6; /* Beige background */
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Increased shadow */
+/* Sidebar Navigation */
+#sidebar {
+    background-color: #0B666A; /* Sidebar color */
+    color: #97FEED; /* Text color in sidebar */
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    margin: 15px 0;
+    padding: 10px;
     text-align: center;
 }
 
-/* Heading */
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Form styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Increased spacing between form elements */
-    margin-bottom: 20px;
-}
-
-form label {
-    font-weight: normal; /* Removed bold styling */
-    font-size: 1.1rem;
-    color: #333;
-    text-align: left;
-    margin-left: 10px;
-}
-
-form input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #000; /* Black border */
-    border-radius: 4px;
-    color: #000; /* Black text inside input */
-    background-color: #fff; /* White input field */
-    margin: 0 10px;
-    width: calc(100% - 20px); /* Ensure input takes up full width */
-}
-
-form button {
-    padding: 12px;
-    font-size: 1.1rem;
-    background-color: #000; /* Black background */
-    color: #f5f5dc; /* Beige text */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 0 10px;
-    width: 100%; /* Make the button take full width */
-}
-
-form button:hover {
-    background-color: #333; /* Darker black on hover */
-}
-
-/* Financial summary section */
-#financial-summary {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fdfdfd;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#total-expenses, #total-savings {
+.nav-item a {
+    text-decoration: none;
+    color: #97FEED;
     font-size: 1.2rem;
-    margin: 10px 0;
-    color: #000; /* Black text */
 }
 
-/* Mobile responsiveness */
+.nav-item a:hover {
+    color: #35A29F; /* Button hover color */
+}
+
+/* Main content area */
+#main-content {
+    margin-left: 250px; /* Space for the sidebar */
+    padding: 20px;
+}
+
+/* Welcome page styling */
+.welcome-page {
+    background-color: #071952;
+    color: #97FEED;
+    text-align: center;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.welcome-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-page p {
+    font-size: 1.2rem;
+}
+
+/* Styling for content pages (Cost Calculator, Spending Trends) */
+.content {
+    background-color: #071952;
+    color: #97FEED;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Buttons and textboxes styling */
+input[type="text"], input[type="number"], select, button {
+    background-color: #35A29F; /* Buttons and textboxes */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #97FEED; /* Button hover color */
+}
+
+/* Mobile responsiveness for sidebar and content */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 2rem; /* Adjust header size for mobile */
-    }
-
-    form input, form button {
-        font-size: 1rem; /* Adjust input and button font size for mobile */
-    }
-
-    #financial-summary {
-        margin-top: 20px;
-    }
-
-    /* Adjust button size for smaller screens */
-    form button {
+    #sidebar {
+        width: 100%;
+        height: auto;
         padding: 10px;
-        font-size: 1rem; /* Adjust font size */
+        position: relative;
     }
 
-    /* Adjust spacing on smaller screens */
-    .app-container {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    form label {
-        font-size: 1rem;
+    #main-content {
+        margin-left: 0;
     }
 }
