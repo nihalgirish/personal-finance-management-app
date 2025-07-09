@@ -5,12 +5,14 @@ let transactions = [];
 const amountInput = document.getElementById('amount');
 const categoryInput = document.getElementById('category');
 const descriptionInput = document.getElementById('description');
-const financeForm = document.getElementById('finance-form');
+const transactionForm = document.getElementById('transaction-form');
 const totalExpensesDiv = document.getElementById('total-expenses');
 const totalSavingsDiv = document.getElementById('total-savings');
+const totalIncomeDiv = document.getElementById('total-income');
+const totalInvestmentsDiv = document.getElementById('total-investments');
 
 // Event listener for form submission
-financeForm.addEventListener('submit', function (e) {
+transactionForm.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevents page reload
 
     // Get form values
@@ -51,10 +53,10 @@ financeForm.addEventListener('submit', function (e) {
     updateSummary();
 
     // Clear the form
-    financeForm.reset();
+    transactionForm.reset();
 });
 
-// Function to update total expenses and savings
+// Function to update total expenses, savings, income, investments
 function updateSummary() {
     let totalExpenses = 0;
     let totalSavings = 0;
@@ -77,4 +79,6 @@ function updateSummary() {
     // Update the displayed summary
     totalExpensesDiv.textContent = `Total Expenses: $${totalExpenses.toFixed(2)}`;
     totalSavingsDiv.textContent = `Total Savings: $${totalSavings.toFixed(2)}`;
+    totalIncomeDiv.textContent = `Total Income: $${totalIncome.toFixed(2)}`;
+    totalInvestmentsDiv.textContent = `Total Investments: $${totalInvestments.toFixed(2)}`;
 }
