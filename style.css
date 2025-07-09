@@ -155,4 +155,35 @@ button:hover {
     form label {
         font-size: 1rem;
     }
+    /* Spending Trends Page Styling */
+#spending-trends {
+    background-color: #071952;
+    color: #97FEED;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#spending-trends h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#spending-trends canvas {
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+#trends-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #071952;
+    color: #97FEED;
+    border-radius: 8px;
+}
+
+#trends-summary h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
 }
