@@ -94,11 +94,11 @@ form button:hover {
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust header size for mobile */
     }
 
     form input, form button {
-        font-size: 1rem;
+        font-size: 1rem; /* Adjust input and button font size for mobile */
     }
 
     #financial-summary {
@@ -108,6 +108,16 @@ form button:hover {
     /* Adjust button size for smaller screens */
     form button {
         padding: 10px;
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Adjust spacing on smaller screens */
+    .app-container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    form label {
         font-size: 1rem;
     }
 }
