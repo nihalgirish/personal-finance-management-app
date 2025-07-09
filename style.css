@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
-/* Basic page styling */
+/* Apply a formal font style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige background */
+    color: #000; /* Black text */
     margin: 0;
     padding: 0;
 }
@@ -17,10 +18,10 @@ body {
 .app-container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
-    background-color: white;
+    padding: 40px;
+    background-color: #f5f5dc; /* Beige background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -42,36 +43,42 @@ form {
 form label {
     font-weight: bold;
     font-size: 1.1rem;
-    color: #555;
+    color: #333;
+    text-align: left;
+    margin-left: 10px;
 }
 
 form input {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 2px solid #000; /* Black border */
     border-radius: 4px;
+    color: #000; /* Black text inside input */
+    background-color: #fff; /* White input field */
+    margin: 0 10px;
 }
 
 form button {
     padding: 12px;
     font-size: 1.1rem;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #000; /* Black background */
+    color: #f5f5dc; /* Beige text */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 0 10px;
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #333; /* Darker black on hover */
 }
 
-/* Summary styling */
+/* Financial summary section */
 #financial-summary {
     margin-top: 30px;
-    padding: 15px;
-    background-color: #f9f9f9;
+    padding: 20px;
+    background-color: #fdfdfd;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -79,13 +86,13 @@ form button:hover {
 #total-expenses, #total-savings {
     font-size: 1.2rem;
     margin: 10px 0;
-    color: #333;
+    color: #000; /* Black text */
 }
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     form input, form button {
@@ -95,39 +102,4 @@ form button:hover {
     #financial-summary {
         margin-top: 20px;
     }
-}
-
-    font-weight: bold;
-}
-
-form input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-#financial-summary {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#total-expenses, #total-savings {
-    margin: 10px 0;
 }
