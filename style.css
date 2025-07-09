@@ -14,7 +14,7 @@ body {
 
 /* Sidebar Navigation */
 #sidebar {
-    background-color: #000; /* Changed to black */
+    background-color: #000; /* Sidebar color */
     color: #97FEED; /* Text color in sidebar */
     width: 250px;
     height: 100vh;
@@ -67,13 +67,60 @@ body {
     font-size: 1.5rem;
 }
 
-/* Styling for content pages (Cost Calculator, Spending Trends) */
-.content {
+/* Cost Calculator Page */
+#cost-calculator {
     background-color: #071952;
     color: #97FEED;
-    margin-top: 30px;
     padding: 30px;
     border-radius: 8px;
+}
+
+#cost-calculator h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Transaction Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #97FEED;
+}
+
+form input[type="number"],
+form input[type="text"],
+form select,
+form button {
+    background-color: #35A29F; /* Buttons and textboxes */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #97FEED; /* Button hover color */
+}
+
+/* Financial Summary Styling */
+#financial-summary {
+    background-color: #071952;
+    color: #97FEED;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#financial-summary h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 /* Buttons and textboxes styling */
@@ -103,5 +150,9 @@ button:hover {
 
     #main-content {
         margin-left: 0;
+    }
+
+    form label {
+        font-size: 1rem;
     }
 }
