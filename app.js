@@ -58,4 +58,33 @@ transactionForm.addEventListener('submit', function (e) {
 
 // Function to update total expenses, savings, income, investments
 function updateSummary() {
-    let totalExpenses = 0
+    let totalExpenses = 0;
+    let totalSavings = 0;
+    let totalIncome = 0;
+    let totalInvestments = 0;
+
+    // Loop through transactions and calculate totals
+    transactions.forEach(transaction => {
+        if (transaction.category === 'expenses') {
+            totalExpenses += transaction.amount;
+        } else if (transaction.category === 'savings') {
+            totalSavings += transaction.amount;
+        } else if (transaction.category === 'income') {
+            totalIncome += transaction.amount;
+        } else if (transaction.category === 'investments') {
+            totalInvestments += transaction.amount;
+        }
+    });
+
+    // Debugging the totals
+    console.log(`Total Expenses: ${totalExpenses}`);
+    console.log(`Total Savings: ${totalSavings}`);
+    console.log(`Total Income: ${totalIncome}`);
+    console.log(`Total Investments: ${totalInvestments}`);
+
+    // Update the displayed summary
+    totalExpensesDiv.textContent = `Total Expenses: $${totalExpenses.toFixed(2)}`;
+    totalSavingsDiv.textContent = `Total Savings: $${totalSavings.toFixed(2)}`;
+    totalIncomeDiv.textContent = `Total Income: $${totalIncome.toFixed(2)}`;
+    totalInvestmentsDiv.textContent = `Total Investments: $${totalInvestments.toFixed(2)}`;
+}
