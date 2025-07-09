@@ -1,32 +1,71 @@
-<!-- Cost Calculator Page -->
-<div class="content" id="cost-calculator">
-    <h2>Cost Calculator</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Transaction Form -->
-    <form id="transaction-form">
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" required>
-
-        <label for="category">Category:</label>
-        <select id="category" name="category" required>
-            <option value="expenses">Expense</option>
-            <option value="income">Income</option>
-            <option value="savings">Savings</option>
-            <option value="investments">Investments</option>
-        </select>
-
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description">
-
-        <button type="submit">Add Transaction</button>
-    </form>
-
-    <!-- Summary Section -->
-    <div id="financial-summary">
-        <h3>Financial Summary</h3>
-        <div id="total-expenses">Total Expenses: $0</div>
-        <div id="total-savings">Total Savings: $0</div>
-        <div id="total-income">Total Income: $0</div>
-        <div id="total-investments">Total Investments: $0</div>
+    <!-- Sidebar Navigation -->
+    <div id="sidebar">
+        <div class="nav-item">
+            <a href="#welcome">Welcome</a>
+        </div>
+        <div class="nav-item">
+            <a href="#cost-calculator">Cost Calculator</a>
+        </div>
+        <div class="nav-item">
+            <a href="#spending-trends">Spending Trends</a>
+        </div>
     </div>
-</div>
+
+    <!-- Main content area -->
+    <div id="main-content">
+        <div class="welcome-page" id="welcome">
+            <h1>Welcome to Your Personal Finance Manager</h1>
+            <p>Your financial insights, now at your fingertips. Let's manage your expenses, savings, and trends together!</p>
+        </div>
+
+        <!-- Cost Calculator Page -->
+        <div class="content" id="cost-calculator">
+            <h2>Cost Calculator</h2>
+
+            <!-- Transaction Form -->
+            <form id="transaction-form">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="expenses">Expense</option>
+                    <option value="income">Income</option>
+                    <option value="savings">Savings</option>
+                    <option value="investments">Investments</option>
+                </select>
+
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description">
+
+                <button type="submit">Add Transaction</button>
+            </form>
+
+            <!-- Summary Section -->
+            <div id="financial-summary">
+                <h3>Financial Summary</h3>
+                <div id="total-expenses">Total Expenses: $0</div>
+                <div id="total-savings">Total Savings: $0</div>
+                <div id="total-income">Total Income: $0</div>
+                <div id="total-investments">Total Investments: $0</div>
+            </div>
+        </div>
+
+        <div class="content" id="spending-trends">
+            <!-- Spending trends content will go here later -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
